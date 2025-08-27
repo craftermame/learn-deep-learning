@@ -1,7 +1,7 @@
 # Learn Deep Learning
 
-ディープラーニングの学びを記録します。
+Record my deep learning learning.
 
 ## TODO
 
-- [ ] ディレクトリ構造を綺麗にする
+- [ ] Clarify the directory structure.
