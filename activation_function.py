@@ -9,6 +9,9 @@ def sigmoid(x):
 def relu(x):  # ReLU: Rectified Linear Unit
     return np.maximum(0, x)
 
+def identify_function(x):
+    return x
+
 
 def test():
     from dataclasses import dataclass
