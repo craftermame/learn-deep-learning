@@ -1,5 +1,5 @@
 import numpy as np
-from activation_function import sigmoid, identify_function
+from activation_function import sigmoid, identify_function, softmax
 
 
 def init_network():
@@ -22,16 +22,16 @@ def forward(network, x):
     a2 = np.dot(z1, W2) + b2
     z2 = sigmoid(a2)
     a3 = np.dot(z2, W3) + b3
-    y = identify_function(a3)
 
-    return y
+    return a3
 
 
 def test():
     network = init_network()
     x = np.array([1.0, 0.5])
     y = forward(network, x)
-    print(y)
+    print('Identify:', identify_function(y))
+    print('Softmax:', softmax(y))
 
 if __name__ == '__main__':
     test()
