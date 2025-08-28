@@ -12,6 +12,14 @@ def relu(x):  # ReLU: Rectified Linear Unit
 def identify_function(x):
     return x
 
+def softmax(x):
+    m = np.max(x)
+    exp_x = np.exp(x - m)  # preventing overflow
+    sum_exp_x = np.sum(exp_x)
+    y = exp_x / sum_exp_x
+
+    return y
+
 
 def test():
     from dataclasses import dataclass
